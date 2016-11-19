@@ -1,0 +1,45 @@
+Developing Data Products Course Project: Commuter Fuel Cost
+========================================================
+author: Raymond Schneider
+date: 11/19/2016
+autosize: true
+
+Concept
+========================================================
+
+This Shiny App presents a tool to determine fuel cost for various vehicles, given a commute distance and the current fuel cost.  Additionally, vehicles and fuel cost information can be sorted by:
+
+- Weight
+- Horsepower
+- Cylinder Count
+- Transmission
+
+This app allows a user to chose the most efficient car for their daily commuting, given various preferences in car features.
+
+Shiny App
+========================================================
+![The graph tab of the app](appImage.png)
+
+
+Data
+========================================================
+The data for this app is derived from the mtcars dataset in the datasets package.
+
+The application is written in R, using the following packages:
+
+- shiny
+- dplyr
+- ggplot2
+- datasets
+- markdown
+
+Code Example
+========================================================
+This is a simplified example of the code generating the MPG by HP graph:
+```{r}
+library(datasets)
+library(ggplot2)
+ggplot(mtcars, aes(x = hp, y = mpg, colour=factor(cyl), label = rownames(mtcars))) +
+      geom_text(hjust = 0, nudge_x = 0.5) +
+      geom_point() 
+```
