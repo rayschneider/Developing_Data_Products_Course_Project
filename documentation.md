@@ -25,5 +25,9 @@ Displays basic car information based on Side Panel input.  For Transmission, 0 =
 
 Displays cars in a  Horsepower x MPG format, with cars displayed based on criteria chosen in the Side Panel.
 
+## Code
 
+Full code available at: https://github.com/rayschneider/Developing_Data_Products_Course_Project
+
+Shiny App hosted at: https://rayschneider.shinyapps.io/Developing_Data_Products_Course_Project/
 
